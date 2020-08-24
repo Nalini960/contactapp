@@ -1,0 +1,27 @@
+<h3>This is Contact page</h3>
+<ul style="list-style:none">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">CONTACTNAME</th>
+      <th scope="col">PHONENUMBER</th>
+      <th scope="col">EMAIL-ID</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each this.model as |contact|}}
+    <tr>
+      {{!-- <td>{{contact.id}}</td> --}}
+      <td><LinkTo @route="contacts.details" @model={{contact.id}}>{{contact.name}}</LinkTo></td>
+      <td> {{contact.phoneNumber}}</td>
+      <td>{{contact.mailId}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</ul>
+<button type="button" class="btn btn-light"><LinkTo @route="new-contact">NewContact</LinkTo></button>
+<br>
+
+{{outlet}}

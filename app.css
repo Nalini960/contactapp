@@ -1,0 +1,35 @@
+*{
+    margin: 10px;
+ }
+
+h3{
+    color: blue;
+ }
+.table{
+    background: #eaeaed;
+    border-radius: 6px;
+    border: 2px solid violet;
+    border-style: groove;
+    background: rgb(255, 192, 213);
+    width: 200px;
+    line-height:32px;
+    
+ }
+ li
+  {
+      margin:10px;
+      text-align: center;
+      overflow: hidden;
+  }
+  .button
+ {
+    color: #FFF;
+    background-color: #5995DA;    /* Blue */
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;    /* Dark gray */
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px 50px auto;
+  }

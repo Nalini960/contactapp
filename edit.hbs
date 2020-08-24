@@ -1,0 +1,26 @@
+{{#if isEdit}}
+<h3>Edit Your Contacts here!!</h3>
+{{else}}
+<h3>Add New Contact here!!</h3>
+{{/if}}
+<div>
+ <div>
+  <label for="contactname">Contact Name</label>
+  <Input @id="contactname" @value={{model.name}} />
+  </div> 
+  <div>
+   <label for="phonenumber">Phone Number</label>
+   <Input @id="phonenumber" @value={{model.phoneNumber}}/>
+   </div>
+  <div>
+   <label for="mailid">Email-Id</label>
+   <Input @id="mailid" @value={{model.mailId}}/>
+  </div>
+</div>
+
+<div><button {{action "save" model}}  type="button" class="btn btn-light">Save</button>
+<button {{action "cancel"}}  type="button" class="btn btn-light"><LinkTo @route="contacts.details" @model={{model.id}}>Cancel</LinkTo></button> </div>
+
+
+{{outlet}}
+

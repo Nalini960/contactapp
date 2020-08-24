@@ -1,0 +1,19 @@
+<br><h3>This is Details Page</h3>
+
+<div>
+    NAME :  {{this.model.name}} <br>
+    PHONENUMBER :  {{this.model.phoneNumber}} <br>
+    EMAIL_ID:  {{this.model.mailId}}<br>
+    {{#if this.model.dob}}
+    DOB:{{this.model.dob}}<br>
+    {{/if}}
+    {{#if this.model.gender}}
+    GENDER:{{this.model.gender}}
+    {{/if}}
+</div>
+<div>
+<button type="button" class="btn btn-light"><LinkTo @route="edit" @query={{hash id =this.model.id}}>EDIT</LinkTo></button>
+<button type="button" class="btn btn-light"{{action "remove" model}}>DELETE</button>
+</div>
+
+{{outlet}}
